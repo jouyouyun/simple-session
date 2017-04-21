@@ -1,0 +1,12 @@
+{
+    "Shortcuts":[
+        {
+            "Shortcut": "Super-T",
+            "Action":"xterm"
+        },
+        {
+            "Shortcut": "Control-Super-Delete",
+            "Action":"logout"
+        }
+    ]
+}

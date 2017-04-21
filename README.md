@@ -38,8 +38,8 @@ Example:
 ``` json
 {
     "WM": "openbox",
-    "autoscripts": "/etc/simple-session/autoscripts/",
-    "background": "/usr/share/simple-session/background.jpg"
+    "AutoScripts": "/etc/simple-session/autoscripts/",
+    "Background": "/usr/share/simple-session/background.jpg"
 }
 ```
 
@@ -68,7 +68,7 @@ You can custom shortcut list, must contain shortcut and action.
 Example:
 ``` json
 {
-    "List":[
+    "Shortcuts":[
         {
             "Shortcut": "Super-T",
             "Action":"xterm"
