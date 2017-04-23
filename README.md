@@ -54,9 +54,10 @@ Display mode available values: extend, mirror, default: extend.
 Example:
 ``` json
 {
+    "Mode": "extend"
+    "AutoAdaptation": 1,
     "Priority": ["eDP1","LVDS1"],
     "Blacklist": ["VGA-2","DP2"],
-    "Mode": "extend"
 }
 ```
 

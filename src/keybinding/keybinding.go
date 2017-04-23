@@ -22,6 +22,10 @@ var (
 	keycodeMap = make(map[string]*shortcutInfo)
 )
 
+const (
+	keybindingFile = "/etc/simple-session/keybinding.json"
+)
+
 type configInfo struct {
 	List shortcutInfos `json:"Shortcuts"`
 }
@@ -32,14 +36,14 @@ type shortcutInfo struct {
 }
 type shortcutInfos []*shortcutInfo
 
-func Load(l *log.Logger, file string) error {
+func Load(l *log.Logger) error {
 	logger.Info("Load keybinding...")
 	_xu, err := xgbutil.NewConn()
 	if err != nil {
 		return err
 	}
 
-	config, err := loadConfigInfo(file)
+	config, err := loadConfigInfo(keybindingFile)
 	if err != nil {
 		return err
 	}

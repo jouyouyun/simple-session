@@ -10,7 +10,7 @@ var (
 )
 
 func main() {
-	keybinding.Load(logger, "")
+	keybinding.Load(logger)
 }
 
 func doToggleDebug() {
