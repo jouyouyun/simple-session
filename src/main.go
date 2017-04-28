@@ -2,6 +2,7 @@ package main
 
 import (
 	"pkg.deepin.io/lib/log"
+	"simple-session/display"
 	"simple-session/keybinding"
 )
 
@@ -10,7 +11,14 @@ var (
 )
 
 func main() {
-	keybinding.Load(logger)
+	err := keybinding.Load(logger)
+	if err != nil {
+		logger.Error("Failed to load keybinding:", err)
+	}
+	err = display.Load(logger)
+	if err != nil {
+		logger.Error("Failed to load display:", err)
+	}
 }
 
 func doToggleDebug() {
@@ -19,4 +27,8 @@ func doToggleDebug() {
 	} else {
 		logger.SetLogLevel(log.LevelDebug)
 	}
+}
+
+func getOutputInfos() string {
+	return display.GetOutputInfos()
 }

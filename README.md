@@ -22,8 +22,8 @@ A simple x11 session, just open a session, incompatible with xdg standard.
 - ToggleDebug()
 > Join debug mode
 
-- SetOutputs(outputs string)
-> Set outputs properties, such as: '{"outputs":[{"Output": "eDP1", "X":0, "Y": 0, "Width": 1920, "Height":1080}]}'
+- ListOutputs(outputs string)
+> Return outputs info, such as: '{[{"Output": "eDP1", "X":0, "Y": 0, "Width": 1920, "Height":1080}]}'
 
 
 ## Config

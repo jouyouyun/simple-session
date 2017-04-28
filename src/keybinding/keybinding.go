@@ -37,7 +37,7 @@ type shortcutInfo struct {
 type shortcutInfos []*shortcutInfo
 
 func Load(l *log.Logger) error {
-	logger.Info("Load keybinding...")
+	l.Info("Load keybinding...")
 	_xu, err := xgbutil.NewConn()
 	if err != nil {
 		return err
@@ -173,7 +173,7 @@ func doAction(cmd string) {
 	go func(c string) {
 		err := app.Wait()
 		if err != nil {
-			logger.Warning("Failed to wait cmd:", err)
+			logger.Warning("Failed to wait cmd:", c, err)
 			return
 		}
 	}(cmd)

@@ -36,11 +36,7 @@ func (m *Manager) Logout() {
 }
 
 func (m *Manager) ListOutput() string {
-	return ""
-}
-
-func (m *Manager) SetOutputs(outputs string) error {
-	return nil
+	return getOutputInfos()
 }
 
 func (*Manager) GetDBusInfo() dbus.DBusInfo {
